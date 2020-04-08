@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Promise</title>
+	<script type="text/javascript">
+		let add = (a, b) => {
+			return new Promise((resolve, reject) => {
+				setTimeout(() => {
+					if(typeof a != 'number' || typeof b != 'number'){
+						return reject(new Error('Khong phai dang so'));
+					}
+					return resolve(a + b);
+				}, 1000);
+			})
+		}
+/*		let a = add(4, 5)
+		// .then(result => console.log(result),
+		.then(result => {
+			console.log('Then thu nhat ' + result);
+			return 'Ket qua la : '+ result},// ket qua tra ve khon phai la gia tri cau add() ma la gia tri cua rusult tron Then()
+		 error => 'Loi la : ' + error)//error => console.log(error.toString()));
+		.then((b) => console.log('Sucessfull' + b));
+		console.log(a);
+		setTimeout(() => console.log(a), 2500);*/
+
+		// let aPromise = Promise.resolve(add(4, 5));
+		// aPromise.then(res => console.log(res));
+// hai phuong thuc resolve vaf reject co the nhan vao gia tri la promise
+		// let rPr = Promise.reject('bị lỗi');
+		// rPr.catch(err => console.log('bị lỗi'));
+
+	</script>
+</head>
+<body>
+	<h1>hello Tuan anh day</h1>
+</body>
+</html>
